@@ -14,8 +14,8 @@ from pathlib import Path
 from dotenv import load_dotenv
 import os
 
-# Load production .env
-load_dotenv(dotenv_path=Path(__file__).resolve().parent.parent / '.env.prod')
+# Load environment variables from .env file
+load_dotenv()
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -31,11 +31,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = [
-    '127.0.0.1',
-    'localhost',
-    'your-app.onrender.com',  # change to your deployment URL
-]
+ALLOWED_HOSTS = ['your-app.onrender.com', '127.0.0.1']
 
 
 # Application definition
