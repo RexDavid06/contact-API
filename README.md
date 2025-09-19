@@ -62,5 +62,4 @@ Note: Each user can only see and manage the contacts they created.
 
 # RUN SERVER
 
-
 python manage.py runserver
